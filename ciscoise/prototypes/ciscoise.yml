@@ -1,0 +1,48 @@
+url: http://www.cisco.com/c/en/us/products/security/identity-services-engine/index.html
+description: >
+  Cisco Identity Services Engine (ISE) allows you to see and control
+  users and devices connecting to the corporate network.
+
+  Cisco Platform Exchange Grid (pxGrid) is a data-sharing platform
+  which allows multiple security products to work together.
+
+prototypes:
+  pxgrid_rest_session:
+    author: MineMeld Core Team
+    development_status: EXPERIMENTAL
+    node_type: miner
+    indicator_types:
+      - IPv4
+      - IPv6
+    tags:
+      - ConfidenceHigh
+      - ShareLevelRed
+    description: >
+      IP to user and IP to SGT (Security Group Tag) mappings from ISE
+      using pxGrid REST bulk session data query API.
+    class: ciscoise.PxgridRestSession
+    config:
+      interval: 300
+      attributes:
+        confidence: 100
+        share_level: red
+      age_out:
+        default: null
+        sudden_death: true
+        interval: null
+
+  sgt_dag:
+      author: MineMeld Core Team
+      development_status: STABLE
+      node_type: output
+      indicator_types:
+        - IPv4
+        - IPv6
+      tags: []
+      description: >
+        Push IP to SGT mappings to PAN-OS devices via DAG.
+      class: minemeld.ft.dag.DagPusher
+      config:
+        persistent_registered_ips: false
+        tag_attributes:
+          - ise_sgt

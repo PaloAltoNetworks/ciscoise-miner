@@ -1,0 +1,17 @@
+{
+    "version": "0.0",
+    "name": "ciscoise-miner",
+    "author": "MineMeld Core Team",
+    "author_email": "techbizdev@paloaltonetworks.com",
+    "description": "Cisco ISE session miner using pxGrid bulk download REST API",
+    "url": "https://github.com/PaloAltoNetworks/ciscoise-miner",
+    "entry_points": {
+        "minemeld_nodes": {
+            "ciscoise.PxgridRestSession": "ciscoise.miner:PxgridRestSession"
+        },
+        "minemeld_prototypes": {
+            "ciscoise.prototypes": "ciscoise:prototypes"
+        }
+    },
+    "manifest_version": 0
+}

@@ -1,0 +1,2 @@
+minemeld-core>=0.9.42
+ipaddress>=1.0.18
