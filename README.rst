@@ -229,3 +229,29 @@ under SYSTEM->EXTENSIONS you upload the extension from a wheel package
 or from git (https://github.com/PaloAltoNetworks/ciscoise-miner.git),
 then activate the extension.  The ``pxgrid_rest_session`` and
 ``sgt_dag`` prototypes are then available to configure nodes.
+
+Sample ``registered-ip`` SGT Objects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Sample IPv4 indicators pushed to PAN-OS as IP-SGT mappings:
+::
+
+ admin@PA-220> show object registered-ip all
+
+ registered IP                             Tags
+ ----------------------------------------  -----------------
+
+ 172.16.1.100
+                                          "mmld_ise_sgt_Developers"
+                                          "mmld_pushed"
+
+ 172.16.1.101
+                                          "mmld_ise_sgt_Contractors"
+                                          "mmld_pushed"
+
+ 172.16.1.102
+                                          "mmld_ise_sgt_Employees"
+                                          "mmld_pushed"
+
+ Total: 3 registered addresses
+ *: received from user-id agent  #: persistent
