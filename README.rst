@@ -39,12 +39,13 @@ include:
 
 .. note::
    Username and password authentication is not currently
-   handled seamlessly.  The password provided by ISE is not the
-   password that must be used in the HTTP Authorization header for the
-   request; it appears it is encoded in some way.  This can be made to
-   work if you sniff the encoded password in the SSL session HTTP
-   Authorization header using something like Wireshark, however
-   the details of this are not provided.
+   handled seamlessly.  The password provided by ISE when you create
+   an account with the username/password auth method is not the
+   password that must be base64 encoded in the HTTP Authorization
+   header for the request; it appears it is encoded in some way.  This
+   can be made to work if you sniff the encoded password in the SSL
+   session HTTP Authorization header using something like Wireshark,
+   however the details of this are not provided.
 
 After you have configured pxGrid with self-signed certificates
 as described in
