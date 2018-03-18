@@ -230,6 +230,9 @@ or from git (https://github.com/PaloAltoNetworks/ciscoise-miner.git),
 then activate the extension.  The ``pxgrid_rest_session`` and
 ``sgt_dag`` prototypes are then available to configure nodes.
 
+.. note::
+   Extensions are not available in AutoFocus-hosted MineMeld.
+
 Sample ``registered-ip`` SGT Objects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
